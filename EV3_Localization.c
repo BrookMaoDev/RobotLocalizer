@@ -94,7 +94,7 @@
 #include "EV3_Localization.h"
 
 // Stuff we define goes inside here
-// #define SIMULATE /* comment this line out to run on the real robot */
+#define SIMULATE /* comment this line out to run on the real robot */
 
 #ifdef SIMULATE
 #define BT_open(id) 0
@@ -422,7 +422,7 @@ static void play_arrival_sound(void) {
 #define CENTER_DRIVE_MS                                                        \
   1600 /* drive time at DRIVE_POWER moving the axle from                       \
           where the sensor hit yellow to the centre (~12 cm) */
-#define PAST_YELLOW_MS                                                     \
+#define PAST_YELLOW_MS                                                         \
   250 /* keep driving this long after the sensor leaves the yellow, so it      \
          stops ~2 cm past the edge, level with the middle of the buildings     \
          on that side (they span ~0 to ~4 cm past the edge) */
